@@ -1,0 +1,16 @@
+{
+	"name": "Explore sales data",
+	"properties": {
+		"content": {
+			"query": "sales\n| where Item == 'Road-250 Black, 48'\n| where datetime_part('year', OrderDate) > 2020\n| sort by Item asc",
+			"metadata": {
+				"language": "kql"
+			},
+			"currentConnection": {
+				"poolName": "adxbtj3q8i",
+				"databaseName": "sales-data"
+			}
+		},
+		"type": "KqlQuery"
+	}
+}
