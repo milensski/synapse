@@ -1,0 +1,11 @@
+{
+	"name": "ingest-data",
+	"properties": {
+		"content": {
+			"query": ".create table sales (\n    SalesOrderNumber: string,\n    SalesOrderLineItem: int,\n    OrderDate: datetime,\n    CustomerName: string,\n    EmailAddress: string,\n    Item: string,\n    Quantity: int,\n    UnitPrice: real,\n    TaxAmount: real)\n\n.ingest into table sales 'https://raw.githubusercontent.com/MicrosoftLearning/mslearn-synapse/master/Allfiles/Labs/01/files/sales.csv' \nwith (ignoreFirstRecord = true)",
+			"metadata": {
+				"language": "kql"
+			}
+		}
+	}
+}
